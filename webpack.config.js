@@ -8,6 +8,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Restaurant Landing',
             template: './dist/index.html',
+            inject: false,
         }),
     ],
     devtool: 'inline-source-map',
@@ -18,8 +19,5 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-    },
-    optimization: {
-        runtimeChunk: 'single',
     },
 }
