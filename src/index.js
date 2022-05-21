@@ -1,4 +1,11 @@
+import main from './main';
+import menu from './menu';
+import contactUs from './contactUs';
+import './style.css';
+
 const content = document.querySelector('#content');
+
+console.log(main);
 
 const generatePage = (() => {
     /*
@@ -20,10 +27,6 @@ const generatePage = (() => {
     const mainButton = document.createElement('button');
     const menuButton = document.createElement('button');
     const contactUsButton = document.createElement('button');
-
-    const main = document.createElement('div');
-    const menu = document.createElement('div');
-    const contactUs = document.createElement('div');
     
     const footer = document.createElement('footer'); 
 
@@ -47,8 +50,57 @@ const generatePage = (() => {
     headerButtons.appendChild(contactUsButton);
     header.appendChild(headerButtons);
 
-    // Displaying main content
-    
-
     content.appendChild(header);
+
+    // Displaying main content by default
+    const mainContent = main();
+    const menuContent = menu();
+    const contactUsContent = contactUs();
+    
+    // mainButton.classList.add('active');
+    
+    content.appendChild(mainContent);
+    content.appendChild(menuContent);
+    content.appendChild(contactUsContent);
+
+     const switchTabs = () => {
+         if (mainButton.classList.contains('active')) {
+             mainContent.style.display = 'block';
+             menuContent.style.display = 'none';
+             contactUsContent.style.display = 'none';
+         } else if (menuButton.classList.contains('active')) {
+             mainContent.style.display = 'none';
+             menuContent.style.display = 'block';
+             contactUsContent.style.display = 'none';
+         } else if (contactUsButton.classList.contains('active')) {
+             mainContent.style.display = 'none';
+             menuContent.style.display = 'none';
+             contactUsContent.style.display = 'block';
+         }
+     }
+
+    // Switching tabs
+    mainButton.addEventListener('click', () => {
+        mainButton.classList.add('active');
+        menuButton.classList.remove('active');
+        contactUsButton.classList.remove('active');
+        switchTabs();
+    });
+
+    menuButton.addEventListener('click', () => {
+        mainButton.classList.remove('active');
+        menuButton.classList.add('active');
+        contactUsButton.classList.remove('active');
+        switchTabs();
+    });
+
+    contactUsButton.addEventListener('click', () => {
+        mainButton.classList.remove('active');
+        menuButton.classList.remove('active');
+        contactUsButton.classList.add('active');
+        switchTabs();
+    });
+    
 })();
+
+export default content;

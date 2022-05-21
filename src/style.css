@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: none;
+}
+
+.menu-content {
+    display: none;
+}
+
+.contact-us-content {
+    display: none;
+}
