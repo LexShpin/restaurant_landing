@@ -2,7 +2,7 @@ const menu = () => {
     /*
         dark side cookies
         grogu shake
-        chewie cake
+        star wars cake
     */
 
     const menuContent = document.createElement('div');
@@ -30,12 +30,11 @@ const menu = () => {
     menuItem1Img.classList.add('menu-item__img');
     menuItem1Text.classList.add('menu-item__text');
 
-    menuItem1Img.src = 'https://i0.wp.com/www.livewellbakeoften.com/wp-content/uploads/2020/08/Small-Batch-Chocolate-Chip-Cookies.jpg?w=745&ssl=1';
+    menuItem1Img.src = 'https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880';
     menuItem1Text.textContent = 'Dark Side Cookies';
 
     menuItem1.appendChild(menuItem1Img);
     menuItem1.appendChild(menuItem1Text);
-    menuContent.appendChild(menuItem1);
 
     const menuItem2Img = document.createElement('img');
     const menuItem2Text = document.createElement('p');
@@ -48,13 +47,24 @@ const menu = () => {
 
     menuItem2.appendChild(menuItem2Img);
     menuItem2.appendChild(menuItem2Text);
-    menuContent.appendChild(menuItem2);
 
     const menuItem3Img = document.createElement('img');
     const menuItem3Text = document.createElement('p');
 
     menuItem3Img.classList.add('menu-item__img');
     menuItem3Text.classList.add('menu-item__text');
+
+    menuItem3Img.src = 'https://pbs.twimg.com/media/DdKvvTXX4AYN6Vq.jpg:large';
+    menuItem3Text.textContent = 'Star Wars Cake';
+
+    menuItem3.appendChild(menuItem3Img);
+    menuItem3.appendChild(menuItem3Text);
+
+    menuItems.appendChild(menuItem1);
+    menuItems.appendChild(menuItem2);
+    menuItems.appendChild(menuItem3);
+
+    menuContent.appendChild(menuItems);
 
     return menuContent;
 }
