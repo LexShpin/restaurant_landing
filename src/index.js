@@ -73,7 +73,7 @@ const generatePage = (() => {
         } else if (contactUsButton.classList.contains('active')) {
             mainContent.style.display = 'none';
             menuContent.style.display = 'none';
-            contactUsContent.style.display = 'block';
+            contactUsContent.style.display = 'flex';
         }
     }
 

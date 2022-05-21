@@ -105,6 +105,21 @@ body {
 
 .contact-us-content {
     display: none;
+    flex-direction: column;
+}
+
+.contact-us-img {
+    width: 800px;
+    border: 5px solid #fbff34;
+    margin: 0 auto;
+}
+
+.contact-us-text {
+    font-family: 'Anakin Mono';
+    text-align: center;
+    font-weight: bold;
+    width: 800px;
+    font-size: 20px;
 }
 
 .active {
