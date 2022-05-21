@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Starjout';
+    src: url('../fonts/Starjout.ttf');
+}
+
+@font-face {
+    font-family: 'Anakin Mono';
+    src: url('../fonts/anakinmono.ttf');
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,16 +22,14 @@ body {
 .heading {
     text-align: center;
     text-transform: uppercase;
+    font-family: 'Starjout';
     font-size: 42px;
-}
-
-.header {
-
+    color: #fbff34;
 }
 
 .header-buttons {
     display: flex;
-    gap: 10px;
+    gap: 40px;
     justify-content: center;
 }
 
@@ -32,6 +40,10 @@ body {
     padding: 25px;
     width: 250px;
     font-size: 24px;
+    font-weight: bold;
+    font-family: 'Anakin Mono';
+    background-color: #fbff34;
+    text-transform: uppercase;
 }
 
 .header__btn:hover {
@@ -41,11 +53,13 @@ body {
 .content__heading {
     text-align: center;
     font-size: 36px;
+    font-family: 'Starjout';
 }
 
 .content__text {
     font-size: 30px;
     text-align: center;
+    font-family: 'Anakin Mono';
 }
 
 .menu-content {

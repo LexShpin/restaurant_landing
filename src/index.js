@@ -1,7 +1,7 @@
 import main from './main';
 import menu from './menu';
 import contactUs from './contactUs';
-import './style.css';
+import './assets/css/style.css';
 
 const content = document.querySelector('#content');
 
