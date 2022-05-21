@@ -5,8 +5,6 @@ import './style.css';
 
 const content = document.querySelector('#content');
 
-console.log(main);
-
 const generatePage = (() => {
     /*
         header
@@ -33,7 +31,7 @@ const generatePage = (() => {
     // header and buttons to switch between tabs
     header.classList.add('header');
     heading.classList.add('heading');
-    heading.textContent = 'Star Wars Caffee';
+    heading.textContent = 'The Dark Side Caffee';
     header.appendChild(heading);
     
     headerButtons.classList.add('header-buttons');
@@ -57,7 +55,7 @@ const generatePage = (() => {
     const menuContent = menu();
     const contactUsContent = contactUs();
     
-    // mainButton.classList.add('active');
+    mainButton.classList.add('active');
     
     content.appendChild(mainContent);
     content.appendChild(menuContent);
