@@ -9,9 +9,9 @@ const generatePage = (() => {
     /*
         header
             h1
-            main(a)
-            menu(a)
-            contact us(a)
+            main(button)
+            menu(button)
+            contact us(button)
         main page -> separate file
         menu page  -> separate file
         contact us page -> separate file
@@ -31,7 +31,7 @@ const generatePage = (() => {
     // header and buttons to switch between tabs
     header.classList.add('header');
     heading.classList.add('heading');
-    heading.textContent = 'The Dark Side Caffee';
+    heading.textContent = 'The Dark Side Bakery';
     header.appendChild(heading);
     
     headerButtons.classList.add('header-buttons');
@@ -61,21 +61,21 @@ const generatePage = (() => {
     content.appendChild(menuContent);
     content.appendChild(contactUsContent);
 
-     const switchTabs = () => {
-         if (mainButton.classList.contains('active')) {
-             mainContent.style.display = 'block';
-             menuContent.style.display = 'none';
-             contactUsContent.style.display = 'none';
-         } else if (menuButton.classList.contains('active')) {
-             mainContent.style.display = 'none';
-             menuContent.style.display = 'block';
-             contactUsContent.style.display = 'none';
-         } else if (contactUsButton.classList.contains('active')) {
-             mainContent.style.display = 'none';
-             menuContent.style.display = 'none';
-             contactUsContent.style.display = 'block';
-         }
-     }
+    const switchTabs = () => {
+        if (mainButton.classList.contains('active')) {
+            mainContent.style.display = 'block';
+            menuContent.style.display = 'none';
+            contactUsContent.style.display = 'none';
+        } else if (menuButton.classList.contains('active')) {
+            mainContent.style.display = 'none';
+            menuContent.style.display = 'block';
+            contactUsContent.style.display = 'none';
+        } else if (contactUsButton.classList.contains('active')) {
+            mainContent.style.display = 'none';
+            menuContent.style.display = 'none';
+            contactUsContent.style.display = 'block';
+        }
+    }
 
     // Switching tabs
     mainButton.addEventListener('click', () => {
